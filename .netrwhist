@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/home/fahim/work/sabrina/arwen'
+let g:netrw_dirhist_2='/home/fahim/temp'
+let g:netrw_dirhist_1='/home/fahim/Setup'

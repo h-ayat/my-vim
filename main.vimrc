@@ -9,6 +9,7 @@ Plug 'derekwyatt/vim-scala'
 Plug 'pangloss/vim-javascript'
 Plug 'junegunn/fzf.vim'
 
+
 call plug#end()
 
 " set number
@@ -16,6 +17,7 @@ set ru
 sy enable
 
 colorscheme edge
+"colorscheme tender
 set termguicolors
 set background=dark
 set tgc
@@ -26,6 +28,7 @@ au BufRead,BufNewFile *.sbt set filetype=scala
 autocmd FileType json syntax match Comment +\/\/.\+$+
 
 source ~/.vim/scala-coc.vimrc
+source ~/.vim/my.vimrc
 
 " Tab and shift tab for completion navigation
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"

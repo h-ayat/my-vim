@@ -11,6 +11,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', {'do' : 'cd app & yarn install' }
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
@@ -41,5 +45,6 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-S-f> :Ag<Space>
 nnoremap <C-b> :Buffers<CR>
+
 
 

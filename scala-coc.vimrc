@@ -15,7 +15,7 @@ set nobackup
 set nowritebackup
 
 " Better display for messages
-set cmdheight=3
+set cmdheight=2
 
 " Use <c-space> for trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()

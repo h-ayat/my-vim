@@ -32,3 +32,5 @@ nnoremap <C-b> :Buffers<CR>
 let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+

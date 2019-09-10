@@ -17,3 +17,9 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 map <C-a><C-t> :NERDTreeToggle<CR>
 "map <C-n> :NERDTreeToggle<CR>
 
+" General configs
+set number relativenumber
+set ru
+sy enable
+
+

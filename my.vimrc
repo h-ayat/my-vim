@@ -10,6 +10,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 "Scala metals settings
 :command MetalsImport :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })
 :command MetalsDoctor :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })
+:command! -nargs=1 SC execute ":! bloop compile " string(<q-args>)
+:command! -nargs=1 ST execute ":! bloop test " string(<q-args>)
 
 " Nerd tree settings
 map <C-a><C-t> :NERDTreeToggle<CR>

@@ -22,4 +22,13 @@ set number relativenumber
 set ru
 sy enable
 
+" fzf config
+
+let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
+nnoremap <C-p> :FZF<CR>
+nnoremap <C-S-f> :Ag<Space>
+nnoremap <C-b> :Buffers<CR>
+
+let g:fzf_action = {
+  \ 'ctrl-v': 'vsplit' }
 

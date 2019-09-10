@@ -43,10 +43,5 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
-nnoremap <C-p> :FZF<CR>
-nnoremap <C-S-f> :Ag<Space>
-nnoremap <C-b> :Buffers<CR>
-
 
 

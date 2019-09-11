@@ -15,6 +15,7 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 
 " Nerd tree settings
 map <C-a><C-t> :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=60
 "map <C-n> :NERDTreeToggle<CR>
 
 " General configs
@@ -28,7 +29,7 @@ let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 nnoremap <C-p> :FZF<CR>
 nnoremap <C-a><C-f> :Ag<Space>
 nnoremap <C-b> :Buffers<CR>
-let g:fzf_layout = { 'down': '~40%' }
+let g:fzf_layout = { 'up': '~30%' }
 
 let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }

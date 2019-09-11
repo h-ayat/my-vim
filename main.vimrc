@@ -36,8 +36,6 @@ set tgc
 let g:javascript_plugin_flow = 1
 
 au BufRead,BufNewFile *.sbt set filetype=scala
-au BufRead,BufNewFile *.yaml set filetype=ansible
-au BufRead,BufNewFile *.yml set filetype=ansible
 
 autocmd FileType json syntax match Comment +\/\/.\+$+
 

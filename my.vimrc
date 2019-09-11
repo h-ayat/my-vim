@@ -26,11 +26,32 @@ sy enable
 
 let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --glob "!.git/*"'
 nnoremap <C-p> :FZF<CR>
-nnoremap <C-S-f> :Ag<Space>
+nnoremap <C-a><C-f> :Ag<Space>
 nnoremap <C-b> :Buffers<CR>
+let g:fzf_layout = { 'down': '~40%' }
 
 let g:fzf_action = {
   \ 'ctrl-v': 'vsplit' }
 
+let g:fzf_colors =
+			\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+
+" Yaml config
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+au BufRead,BufNewFile *.yaml set filetype=ansible
+au BufRead,BufNewFile *.yml set filetype=ansible
+
 

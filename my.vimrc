@@ -56,3 +56,8 @@ au BufRead,BufNewFile *.yaml set filetype=ansible
 au BufRead,BufNewFile *.yml set filetype=ansible
 
 
+" My other config
+execute "set <M-j>=\ej"
+execute "set <M-J>=\eJ"
+nnoremap <M-j> :bn<CR>
+nnoremap <M-J> :bp<CR>

@@ -20,6 +20,9 @@ set cmdheight=2
 " Use <c-space> for trigger completion.
 " inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <silent><expr> <NUL> coc#refresh()
+execute "set <M-'>=\e'"
+nmap  <silent> <M-'> :call CocActionAsync('showSignatureHelp')<CR>
+inoremap  <silent> <M-'> <Esc>:call CocActionAsync('showSignatureHelp')<CR>a
 
 " Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
 " Coc only does snippet and additional edit on confirm.

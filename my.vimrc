@@ -14,8 +14,15 @@ let g:airline#extensions#tabline#formatter = 'unique_tail'
 :command! -nargs=1 ST execute ":! bloop test " string(<q-args>)
 
 " Nerd tree settings
-map <C-a><C-t> :NERDTreeToggle %<CR>
+" map <C-a><C-t> :NERDTreeToggle<CR>
+nnoremap <silent> <expr> <C-t> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"
+
 let g:NERDTreeWinSize=60
+let NERDTreeQuitOnOpen = 1
+let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
 "map <C-n> :NERDTreeToggle<CR>
 " see https://shapeshed.com/vim-netrw/
 let g:NetrwIsOpen=0
@@ -37,7 +44,7 @@ function! ToggleNetrw()
 endfunction
 
 " Add your own mapping. For example:
-noremap <silent> <C-E> :call ToggleNetrw()<CR>
+" noremap <silent> <C-E> :call ToggleNetrw()<CR>
 "map <C-a><C-t> :Vex<CR>
 let g:netrw_liststyle = 3
 let g:netrw_banner = 0

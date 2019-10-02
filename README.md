@@ -1,4 +1,5 @@
 # my-vim
+
 My vim config
 The gif below demos working on a scala project,  following features (ordered by appearance in gif!)
 1. Fuzzy file search

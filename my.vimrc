@@ -56,6 +56,7 @@ let g:netrw_winsize = 25
 set number relativenumber
 set ru
 sy enable
+set autowriteall
 
 " fzf config
 

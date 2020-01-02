@@ -51,6 +51,8 @@ let g:netrw_banner = 0
 let g:netrw_winsize = 25
 
 
+:command YankUp :call writefile(getreg('"', 1, 1), '/tmp/cl.vi') | exec ':!cat /tmp/cl.vi | xclip -selection clipboard'
+nnoremap <C-a><C-v> :YankUp<CR><CR>
 
 " General configs
 set number relativenumber
@@ -107,3 +109,4 @@ else
     let &t_ti = &t_ti . "\033]10;#f6f3e8\007\033]11;#141414\007"
     let &t_te = &t_te . "\033]110\007\033]111\007"
 endif
+

@@ -7,6 +7,19 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'deus'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 
+let g:airline#extensions#coc#enabled = 1
+"let airline#extensions#coc#error_symbol = 'E:'
+"let airline#extensions#coc#warning_symbol = 'W:'
+"let airline#extensions#coc#stl_format_err = '%E{[%e(#%fe)]}'
+"let airline#extensions#coc#stl_format_warn = '%W{[%w(#%fw)]}'
+"let g:airline#extensions#ctrlspace#enabled = 1
+
+function! CocExtensionStatus() abort
+  return get(g:, 'coc_status', '')
+endfunction
+let g:airline_section_c = '%f%{CocExtensionStatus()}'
+
+
 "Scala metals settings
 :command MetalsImport :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })
 :command MetalsDoctor :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })

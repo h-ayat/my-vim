@@ -19,20 +19,18 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chase/vim-ansible-yaml'
 
-Plug 'ckipp01/coc-metals', {'do': 'yarn install --frozen-lockfile'}
+"Plug 'ckipp01/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'reasonml-editor/vim-reason-plus'
-
-
-
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 
 " set number
 set ru
 sy enable
+set encoding=UTF-8
 
 colorscheme edge
-"colorscheme tender
 set termguicolors
 set background=dark
 set tgc

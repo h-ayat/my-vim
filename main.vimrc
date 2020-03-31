@@ -18,6 +18,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'chase/vim-ansible-yaml'
+Plug 'RRethy/vim-illuminate'
 
 "Plug 'ckipp01/coc-metals', {'do': 'yarn install --frozen-lockfile'}
 Plug 'reasonml-editor/vim-reason-plus'

@@ -21,11 +21,11 @@ let g:airline_section_c = '%f%{CocExtensionStatus()}'
 
 
 "Scala metals settings
-:command MetalsImport :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'build-import' })
-:command MetalsDoctor :call CocRequestAsync('metals', 'workspace/executeCommand', { 'command': 'doctor-run' })
 :command! -nargs=1 SC execute ":! bloop compile " string(<q-args>)
 :command! -nargs=1 ST execute ":! bloop test " string(<q-args>)
-
+nnoremap <silent> <space>f  :<C-u>call CocAction('format')<cr>
+nnoremap <silent> <space>p  :<C-u>call CocActionAsync('showSignatureHelp')<cr>
+"
 " Nerd tree settings
 " map <C-a><C-t> :NERDTreeToggle<CR>
 nnoremap <silent> <expr> <C-t> g:NERDTree.IsOpen() ? "\:NERDTreeClose<CR>" : bufexists(expand('%')) ? "\:NERDTreeFind<CR>" : "\:NERDTree<CR>"

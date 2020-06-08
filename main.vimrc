@@ -45,10 +45,5 @@ autocmd FileType json syntax match Comment +\/\/.\+$+
 source ~/.vim/scala-coc.vimrc
 source ~/.vim/my.vimrc
 
-" Tab and shift tab for completion navigation
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
 
 
